@@ -61,6 +61,7 @@ $( document ).ready(function() {
            type: "GET",
            url: url,
            dataType:'text',
+          crossDomain: true,
            success: function(data)
            {
                var responseData=(decodeURIComponent(data));

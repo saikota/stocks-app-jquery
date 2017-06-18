@@ -60,6 +60,7 @@ $( document ).ready(function() {
        $.getJSON({
            type: "GET",
            url: url,
+           crossDomain: true,
            dataType:'text',
            success: function(data)
            {
