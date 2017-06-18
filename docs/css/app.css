@@ -1,0 +1,20 @@
+.stock-row{
+    margin-top:15px;
+}
+
+.price-change{
+    font-size:2rem;
+}
+.stock-fld{
+    padding-left: 5px;
+    padding-right:5px;
+}
+.stock-fld-detail{
+    padding-right:5px;
+}
+.stock-up{
+    color:green;
+}
+.stock-down{
+    color:red;
+}
