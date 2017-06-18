@@ -43,7 +43,7 @@ function handleSuccess(response){
    $("#portfolio").submit(function( evt ) {
 
        evt.preventDefault();
-       var newUrl="https://finance.google.com/finance/info?q=";
+       var newUrl="http://finance.google.com/finance/info?client=ig&q=";
        var tmpStr="";
 
        var tmpObj={};
@@ -69,7 +69,7 @@ function handleSuccess(response){
        $.getJSON({
            type: "GET",
            url: url,
-           headers: {'Access-Control-Allow-Headers': '*'},
+           headers: {'Access-Control-Allow-Headers': '*','Access-Control-Request-Headers':'*'},
            crossDomain: true,
            dataType:'text',
            success: function(data)
