@@ -31,6 +31,15 @@ $( document ).ready(function() {
         return fetchStockArr;
     }
 
+function handleSuccess(response){
+
+   var responseData=(decodeURIComponent(response));
+               var stockArr=JSON.parse(responseData.substring(3));
+               $('#results').empty();
+              var resultStockArr= processData(stockArr);
+
+               $('#results').append(template({'stocks':resultStockArr}));
+}
    $("#portfolio").submit(function( evt ) {
 
        evt.preventDefault();
@@ -51,7 +60,7 @@ $( document ).ready(function() {
        var url = newUrl+tmpStr;
        //"http://finance.google.com/finance/info?q=NASDAQ:AAPL";
 
-
+       url+="&callback=?handleSuccess"
 
 
        stockArr.push(tmpObj);
@@ -65,12 +74,12 @@ $( document ).ready(function() {
            dataType:'text',
            success: function(data)
            {
-               var responseData=(decodeURIComponent(data));
-               var stockArr=JSON.parse(responseData.substring(3));
-               $('#results').empty();
-              var resultStockArr= processData(stockArr);
+              //  var responseData=(decodeURIComponent(data));
+              //  var stockArr=JSON.parse(responseData.substring(3));
+              //  $('#results').empty();
+              // var resultStockArr= processData(stockArr);
 
-               $('#results').append(template({'stocks':resultStockArr}));
+              //  $('#results').append(template({'stocks':resultStockArr}));
 
                // if (typeof(Storage) !== "undefined") {
                //     // Code for localStorage/sessionStorage.
