@@ -34,7 +34,7 @@ $( document ).ready(function() {
    $("#portfolio").submit(function( evt ) {
 
        evt.preventDefault();
-       var newUrl="http://finance.google.com/finance/info?q=";
+       var newUrl="https://finance.google.com/finance/info?q=";
        var tmpStr="";
 
        var tmpObj={};
