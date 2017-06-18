@@ -60,7 +60,7 @@ $( document ).ready(function() {
        $.getJSON({
            type: "GET",
            url: url,
-          headers: {'Access-Control-Allow-Headers': '*'}
+          headers: {'Access-Control-Allow-Headers': '*'},
            dataType:'text',
           crossDomain: true,
            success: function(data)
